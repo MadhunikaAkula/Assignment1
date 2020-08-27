@@ -1,0 +1,16 @@
+.customeye{
+    margin-left: -10px;
+    color: darkcyan;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid darkcyan;
+}
+
+
+.modal-title{
+    color: darkcyan;
+    margin-left: auto;
+}
+.modal-footer{
+    margin: auto;
+}
