@@ -1,9 +1,19 @@
+
+  <div class="alert alert-danger alert-dismissible fade show"*ngIf="error">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{error}}
+  </div>
+  <div class="alert alert-success alert-dismissible fade show"*ngIf="success">
+    <button  type="button" class="close" data-dismiss="alert">&times;</button>
+   user registered successfully
+  </div>
 <div class="container">
     <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">SIGNUP</h3>
+                    <h3 class="panel-title">SIGNUP &nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </h3>
                 </div>
                 <div class="panel-body">
                     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
@@ -63,13 +73,14 @@
                                 required</div>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-primary mr-1">Register</button>
+                            <button class="btn mr-1">Register <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            </button>
                             <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
                         </div>
                     </form>
-                    <p class="center">Already SignIn??<button type="button" class="link" >
-                            Click here
-                        </button></p>
+                    <p class="center">Already SignIn?? &nbsp;<a routerLink="/login"type="button" class="link">
+                        Click here
+                    </a></p>
                 </div>
             </div>
         </div>

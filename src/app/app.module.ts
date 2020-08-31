@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule ,HTTP_INTERCEPTORS } from '@angular/common/http';
+import{HeaderInterceptor}from'../app/interceptors/interceptor';
 /* custom modules*/
 import{AccountsModule}from'./accounts/accounts.module';
 
@@ -24,9 +25,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,AccountsModule,RouterModule.forRoot(routes),FormsModule,ReactiveFormsModule
-    ,BrowserAnimationsModule
+    ,BrowserAnimationsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true } 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

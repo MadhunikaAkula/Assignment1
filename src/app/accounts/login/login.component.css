@@ -6,7 +6,6 @@
     border: 1px solid darkcyan;
 }
 
-
 .modal-title{
     color: darkcyan;
     margin-left: auto;
@@ -14,3 +13,43 @@
 .modal-footer{
     margin: auto;
 }
+.mr-1{
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+.labelcolor{
+    color: white;
+}
+.linklogin{
+    border: none;
+    text-decoration: underline;
+    color: darkcyan;
+    background-color: black;
+
+}
+.reset{
+    background-color: white;
+    color: darkcyan;
+    text-decoration: underline;
+    border: 1px solid white;
+}
+.center{
+    text-align: center;
+}
+.panel-title{
+    color: lightcoral;
+    text-align: center;
+} 
+.centered-form{
+    margin-top: 15%;
+    justify-content: center;
+}
+.center{
+    text-align: center;
+}
+@media (min-width:320px) and (max-width: 338px) {
+     .cp{
+      width: max-content !important;
+    }
+  }
+

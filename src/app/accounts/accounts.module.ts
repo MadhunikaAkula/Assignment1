@@ -6,9 +6,10 @@ import { LoginComponent } from '../accounts/login/login.component';
 import { RegisterComponent } from '../accounts/register/register.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {path:'login/:token',component:LoginComponent}
 ];
 
 @NgModule({

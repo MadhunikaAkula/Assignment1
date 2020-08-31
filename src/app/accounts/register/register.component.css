@@ -1,0 +1,27 @@
+.mr-1{
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+label{
+    color: white;
+}
+.center{
+    color: white;
+}
+.link{
+    border: none;
+    text-decoration: underline;
+    color: darkcyan;
+    background-color: black;
+}
+.panel-title{
+    color: lightcoral;
+    text-align: center;
+} 
+.centered-form{
+    margin-top: 15%;
+    justify-content: center;
+}
+.center{
+    text-align: center;
+}

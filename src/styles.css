@@ -1,31 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~font-awesome/css/font-awesome.css";
 
-/* body{
-    background-color: #525252;
-} */
-.centered-form{
-    margin-top: 15%;
-    justify-content: center;
+body{
+    background-color: black;
 }
-.panel-title{
-    color: #17a2b8;
-    text-align: center;
-}
-.centered-form .panel{
-	background: rgba(255, 255, 255, 0.8);
-	/* box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px; */
-}
-.btn-primary{
-    background-color: darkcyan !important;
-    color: white;
-}
-.center{
-    text-align: center;
-}
-.link{
-    border: none;
-    text-decoration: underline;
-    color: darkcyan;
-
+.alert{
+    width: fit-content;
+    margin-left: auto;
 }
