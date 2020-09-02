@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../../helpers/must-match.validator';
+import { MustMatch } from '../../../helpers/must-match.validator';
 import { AccountsService } from '../accounts.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -26,16 +26,16 @@ export class LoginComponent implements OnInit {
   error;
   forgorerror;
   forgotToken;
+  IsFree;
   constructor(private formBuilder: FormBuilder, private Router: Router, private AccountsService: AccountsService, private ActivatedRoute: ActivatedRoute) {
     this.forgotToken = this.ActivatedRoute.snapshot.paramMap.get("token");
-    if (this.forgotToken) {
+    if (this.forgotToken == 'free') {
+    } else {
       this.IsSignUpShow = false;
       this.IsResetShow = true;
       localStorage.setItem('forgotToken', this.forgotToken)
     }
-
   }
-
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
   get g() { return this.resetForm.controls; }
 
-  
+
   onResetRegister() {
     this.submitted = false;
     this.loginForm.reset();
@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
       this.show = false;
     }
   }
-  
+
   openForgotModel() {
     console.log("console")
     this.IsModelShow = true;
@@ -104,6 +104,12 @@ export class LoginComponent implements OnInit {
     }
     this.AccountsService.signIn(data).subscribe(response => {
       this.success = true;
+      localStorage.setItem('Loggeduser', JSON.stringify(response));
+      if (this.forgotToken == 'free') {
+        this.Router.navigate(['trails/free'])
+      } else {
+        this.Router.navigate(['home']);
+      }
     }, err => {
       this.error = err.error.message;
     })
@@ -115,8 +121,8 @@ export class LoginComponent implements OnInit {
     }
     this.AccountsService.forgotpassword(data).subscribe(response => {
       this.mailcheck = true;
-      this.IsSignUpShow=true;
-      this.IsModelShow=false;
+      this.IsSignUpShow = true;
+      this.IsModelShow = false;
       localStorage.setItem('userInfo', JSON.stringify(response));
     }, err => {
       this.forgorerror = err.error.message;

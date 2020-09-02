@@ -1,0 +1,50 @@
+<div class="cardv bg">
+    <div class="row">
+        <div class="col-md-8">
+            <img class="prime"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/1200px-Amazon_Prime_Video_logo.svg.png">
+            <p class="res">Watch now,cancel anytime</p>
+            <h3 class="res">Start your 30 days free trial</h3>
+        </div>
+        <div class="col-md-4">
+            <img class="image" src="https://www.orderhive.com/wp-content/uploads/2017/05/Movie-Posters-Direct-1.png">
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="card rem">
+    <div class="card-header">More payment Options</div>
+    <div class="card-body">
+        <input type="radio" [(ngModel)]="payment" name="payment" value="payment">
+        Add Credit/Debit/ATM card<br>
+        <img
+            src="https://images-eu.ssl-images-amazon.com/images/G/31/payments-portal/r1/issuer-images/sprite-map._CB443317321_.png">
+        <p>We’ll save this card for your convenience. Remove it by going to Your Account section.
+        </p>
+        <form class="form-inline" *ngIf="payment">
+            <div class="form-group">
+                <label for="email">Name on Card:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Crad Number:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Expiry Date</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <!-- <option selected>Choose...</option> -->
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <!-- <option selected>Choose...</option> -->
+                <option value="1">2011</option>
+                <option value="2">2000</option>
+                <option value="3">3000</option>
+              </select>
+            <button type="submit" class="btn btn-primary">Add your card</button>
+        </form>
+    </div>
+</div>

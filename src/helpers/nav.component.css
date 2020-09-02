@@ -1,0 +1,9 @@
+.mr-sm-2{
+    width: 45rem;
+    margin-left: 15rem;
+}
+sup{
+    top: -0.5em;
+    border-radius: 50%;
+    font-weight: bolder;
+}

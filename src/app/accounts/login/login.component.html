@@ -1,77 +1,82 @@
-<div class="alert alert-success alert-dismissible fade show" *ngIf="success">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    user logged successfully
-</div>
-<div class="alert alert-danger alert-dismissible fade show" *ngIf="error">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{error}}
-</div>
-<div class="alert alert-danger alert-dismissible fade show" *ngIf="forgorerror">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{forgorerror}}
-</div>
-<div class="alert alert-success alert-dismissible fade show" *ngIf="resetsuccess">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    password changed succcessfully.
-</div>
-<div class="alert alert-success alert-dismissible fade show" *ngIf="mailcheck">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    Plese check your mail to reset yur password
-</div>
 
-<div class="container" *ngIf="IsSignUpShow">
-    <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">SIGNIN &nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i>
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <form [formGroup]="loginForm" (ngSubmit)="onSignIn()">
-                        <div class="form-group">
-                            <label class="labelcolor">Email</label>
-                            <input type="text" formControlName="email" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                                <div *ngIf="f.email.errors.required">Email is required</div>
-                                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+<div class="card bg">
+    <div class="alert alert-success alert-dismissible fade show" *ngIf="success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        user logged successfully
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" *ngIf="error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{error}}
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" *ngIf="forgorerror">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{forgorerror}}
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" *ngIf="resetsuccess">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        password changed succcessfully.
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" *ngIf="mailcheck">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Plese check your mail to reset yur password
+    </div>
+    <div class="container" *ngIf="IsSignUpShow">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SIGNIN &nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form [formGroup]="loginForm" (ngSubmit)="onSignIn()">
+                            <div class="form-group">
+                                <label class="labelcolor">Email</label>
+                                <input type="text" formControlName="email" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <label class="labelcolor">Password</label>
-                            <div class="form-group col-11">
-                                <input [type]="password" formControlName="password" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                                    <div *ngIf="f.password.errors.required">Password is required</div>
-                                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters
+                            <div class="form-row">
+                                <label class="labelcolor">Password</label>
+                                <div class="form-group col-11">
+                                    <input [type]="password" formControlName="password" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                        <div *ngIf="f.password.errors.required">Password is required</div>
+                                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-1">
+                                    <div class="customeye" (click)="onEyeClick()">
+                                        <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                        <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col-1">
-                                <div class="customeye" (click)="onEyeClick()">
-                                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
-                                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
-                                </div>
+                            <div class="text-center">
+                                <button class="btn mr-1">Login</button>
+                                <button class="btn btn-secondary" type="reset"
+                                    (click)="onResetRegister()">clear</button>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn mr-1">Login</button>
-                            <button class="btn btn-secondary" type="reset" (click)="onResetRegister()">clear</button>
-                        </div>
-                    </form>
-                    <p class="center labelcolor">Forgot password?? &nbsp;<i class="fa fa-lock" aria-hidden="true"></i>
+                        </form>
+                        <p class="center labelcolor">Forgot password?? &nbsp;<i class="fa fa-lock"
+                                aria-hidden="true"></i>
 
-                        <button type="button" class="linklogin" (click)="openForgotModel()">
-                            Click here
-                        </button></p>
+                            <button type="button" class="linklogin" (click)="openForgotModel()">
+                                Click here
+                            </button></p>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+
 
 <!-- The FORGOT Modal -->
 
@@ -144,7 +149,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="center" >
+                        <div class="center">
                             <button class="btn btn-primary mr-1 ">Reset</button>
                             <button type="reset" class="btn btn-danger " (click)="onResetReset()">clear</button>
                         </div>
@@ -153,4 +158,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

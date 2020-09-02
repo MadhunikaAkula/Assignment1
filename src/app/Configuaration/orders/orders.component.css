@@ -1,0 +1,16 @@
+.drop{
+    margin-left: 65rem;
+}
+#exTab2 h3 {
+    color : white;
+    background-color: #428bca;
+    padding : 5px 15px;
+  }
+  .tileMe li {
+    display: inline;
+    float: left;
+    margin: 11px;
+}
+.size{
+    width:52rem;
+}

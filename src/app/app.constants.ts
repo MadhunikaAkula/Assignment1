@@ -8,5 +8,5 @@ import { Injectable } from "@angular/core";
     public readonly signUp: string = 'http://localhost:8080/api/auth/signup';
     public readonly forgotpassword: string = 'http://localhost:8080/api/auth/forgotpassword';
     public readonly resetpassword: string = 'http://localhost:8080/api/auth/resetpassword';
-
+    public readonly getvideo:string="http://localhost:8080/api/auth/video";
 }

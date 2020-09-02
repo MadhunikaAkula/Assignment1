@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item drop">
+            <a class="nav-link" routerLink="/trails/months">Back</a>
+        </li>
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Madhu...
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" routerLink="/login">LogOut</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="card">
+    <div class="card-header">Your Orders</div>
+    <br>
+    <form>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-4">
+                <input type="text" placeholder="search orders ..." class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+    <div class="card-body">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">BuyAgain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#references" role="tab" data-toggle="tab">open Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#references" role="tab" data-toggle="tab">Cancelled Orders</a>
+            </li>
+        </ul>
+        <br>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="profile">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card ">
+                            <div class="card-header">
+                                <ul class="tileMe">
+                                    <li>
+                                        <p>OrderPlaced</p>
+                                    </li>
+                                    <li>
+                                        <p>Rs.137</p>
+                                    </li>
+                                    <li>
+                                        <p>Srinvas..</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <p>Pernamitta,Ongole</p>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img style="height:150px" src="https://da28rauy2a860.cloudfront.net/outdoordesign.com.au/contents/7381/20190925101631_403.jpg">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p>Face mask for white and black heads</p>
+                                        <p>Rs.137</p>
+                                        <button class="btn btn-primary">Buy Again</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                </div>
+                
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="buzz">There are no recommended items for you to buy again at this time. Check Your Orders for items you previously purchased.</div>
+            <div role="tabpanel" class="tab-pane fade" id="references">Looking for an order? All of your orders have been dispatched. View all orders
+            <div role="tabpanel" class="tab-pane fade" id="references">Looking for an order? All of your orders have been dispatched. View all orders
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.image{
+    height: 147px;
+}
+.bg{
+    background-color: currentColor;
+}
+.res{
+    color: white;
+    margin-left: 11rem;
+}
+.prime{
+    height: 58px;
+    margin-left: 11rem;
+    margin-top: 9px;
+
+}
+.rem{
+    margin:5rem;
+    padding: 1rem;
+}
+

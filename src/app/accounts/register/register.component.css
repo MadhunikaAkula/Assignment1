@@ -25,3 +25,7 @@ label{
 .center{
     text-align: center;
 }
+.bg{
+    background-color: black;
+    height: 40rem;
+}

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <img src="https://m.media-amazon.com/images/G/01/primevideo/seo/primevideo-seo-logo-square.png" class="image">
+    </a>
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <img class="image1"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRM0X-hbCW53djIloDVYqwJ_jCkADQ503Go2g&usqp=CAU">
+                Madhu...
+            </a>
+            <div class="dropdown-menu">
+                <div class="row">
+                    <div class="col-5">
+                        <p class="pad"><a>Watch anywhere</a></p>
+                        <p class="pad"><a>Help</a></p>
+                        <p class="pad"><a (click)="logOut()">SignOut</a></p>
+                    </div>
+                    <div class="col-2">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-5">
+                        <p class="ptag"><a><i class="fa fa-smile-o" aria-hidden="true"></i>
+                                Kids</a></p>
+                        <p class="ptag"><a><i class="fa fa-plus" aria-hidden="true"></i>
+                                Add New</a></p>
+                        <p class="ptag"><a>Manage Profiles</a></p>
+                        <p class="ptag"><a>Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="card bg">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Welcome to primevideo</h3>
+            <h4>jOin to prime to watch movies,tv shows and award winning Originals</h4>
+            <button class="btn btn-primary" routerLink="/trails/months">Get 3 months of prime at Rs.329</button>
+            <p class="body">with any electric payment method </p>
+            <button class="btn btn-primary"(click)="freetrails()">Start your 30days free trial</button>
+            <p class="body">with any credic and select debit cards.</p>
+            <p class="body">You can also</p>
+            <button class="btn btn-primary" (click)="freetrails1()">Get a year of prime at Rs.999</button>
+            <p class="body">with all electric payment methods and pay on devivery for select pincodes</p>
+
+        </div>
+        <div class="col-md-6">
+            <img
+                src="https://static.boredpanda.com/blog/wp-content/uuuploads/movie-poster-cliches/movie-poster-cliches-12.jpg">
+        </div>
+    </div>
+</div>
